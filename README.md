@@ -12,3 +12,10 @@ Made with Ubuntu/Debian based operating systems in mind.
 - Perfect for quick deployment and setup
 - Ethernet can be used to clone, push, pull, etc 
 - Requires a display
+
+# install
+```
+git clone https://github.com/LED-esma/local-git-setup.git
+cd local-git-setup
+sudo ./setup.bash 
+```

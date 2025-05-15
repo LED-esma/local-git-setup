@@ -53,6 +53,10 @@ echo "Creating local data directory at $LOCAL_GITEA_DATA"
 sudo mkdir -p "$LOCAL_GITEA_DATA"
 sudo chown -R 1000:1000 "$LOCAL_GITEA_DATA"
 
+# Makes sure that the container doesn't run more than once
+echo "Removing Gitea container if it exists..."
+sudo docker stop $GITEA_CONTAINER_NAME 2>/dev/null || true
+sudo docker rm $GITEA_CONTAINER_NAME 2>/dev/null || true
 
 # === Pull and run Gitea ===
 # pull the latest Gitea image and runs it
